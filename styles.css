@@ -1,0 +1,124 @@
+/* Background Animation */
+body {
+    animation: gradientShift 15s ease infinite alternate;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Fade-in animation for elements */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Color block animations */
+.color-block {
+    transition: all 0.3s ease;
+    animation: colorAppear 0.5s ease-out backwards;
+}
+
+.color-block:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes colorAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Stagger effect for color blocks */
+.color-block:nth-child(1) { animation-delay: 0s; }
+.color-block:nth-child(2) { animation-delay: 0.1s; }
+.color-block:nth-child(3) { animation-delay: 0.2s; }
+.color-block:nth-child(4) { animation-delay: 0.3s; }
+.color-block:nth-child(5) { animation-delay: 0.4s; }
+
+/* Copy animation */
+.copied-message {
+    animation: fadeInOut 1.5s ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    85% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Button animation */
+#generate-btn {
+    transition: all 0.3s ease;
+}
+
+#generate-btn:active {
+    transform: scale(0.95);
+}
+
+/* Color tone selection styles */
+.tone-block {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: colorAppear 0.5s ease-out backwards;
+}
+
+.tone-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tone-block.active {
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7), 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Stagger effect for tone blocks */
+.tone-block:nth-child(1) { animation-delay: 0s; }
+.tone-block:nth-child(2) { animation-delay: 0.05s; }
+.tone-block:nth-child(3) { animation-delay: 0.1s; }
+.tone-block:nth-child(4) { animation-delay: 0.15s; }
+.tone-block:nth-child(5) { animation-delay: 0.2s; }
+.tone-block:nth-child(6) { animation-delay: 0.25s; }
+.tone-block:nth-child(7) { animation-delay: 0.3s; } 
